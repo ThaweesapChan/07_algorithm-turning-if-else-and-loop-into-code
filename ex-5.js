@@ -8,6 +8,19 @@
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ในโค้ดด้านล่าง
 */
 
+function calculateAverageScore(scores, classNumber, targetSubject) {
+  let sumScores = 0;
+  let count = 0;
+
+  for (let scores_index of scores) {
+    if (scores_index["classNumber"] === classNumber) {
+      count++;
+      sumScores += scores_index["subject"][targetSubject];
+    }
+  }
+  return sumScores / count;
+}
+
 const scores = [
   {
     firstname: "Bob",

@@ -6,6 +6,18 @@
     - Function นี้จะนำคะแนนสอบของนักเรียนในห้องที่ระบุมาบวกกัน จากนั้นนำไปหาค่าเฉลี่ย แล้ว Return ค่าออกมา
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ในโค้ดด้านล่าง
 */
+function calculateAverageScore(scores, classNumber) {
+  let sumScores = 0;
+  let counti=0;
+  for (i of scores) {
+    if (classNumber === i["classNumber"]) {
+      sumScores += i["mathScore"];
+      counti++;
+    }
+  }
+   return sumScores / counti
+}
+
 
 const scores = [
   { firstname: "Isabel", lastname: "Moore", classNumber: 3, mathScore: 78 },
